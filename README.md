@@ -1,7 +1,7 @@
 # HT Airline Management Service
 * [Introduction](#introduction)
 * [Service](#service)
-* [Open-API](#Open API V3)
+* [Open-API](#Open-API-v3)
 * [Prerequisites](#prerequisites)
     * [Development Tools](#development-tools)
 * [Build Project](#build-project)
