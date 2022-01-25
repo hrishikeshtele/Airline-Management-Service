@@ -1,0 +1,11 @@
+<entity-mappings version="2.1"
+                 xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+>
+    <entity class="com.ht.airline.db.entity.Customer">
+        <convert converter="com.ht.airline.config.DBCryptoConfig" attribute-name="email"/>
+        <convert converter="com.ht.airline.config.DBCryptoConfig" attribute-name="firstName"/>
+        <convert converter="com.ht.airline.config.DBCryptoConfig" attribute-name="lastName"/>
+        <convert converter="com.ht.airline.config.DBCryptoConfig" attribute-name="mobileNumber"/>
+        <convert converter="com.ht.airline.config.DBCryptoConfig" attribute-name="pwdHash"/>
+    </entity>
+</entity-mappings>

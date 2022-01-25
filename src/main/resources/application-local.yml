@@ -1,0 +1,81 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:root}
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        default_schema: airline_service
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    open-in-view: false
+    repositories:
+      bootstrap-mode: default
+  flyway:
+    enabled: false
+  main:
+    banner-mode: "off"
+
+  application:
+    name: arline-service
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL:INFO}
+    com.ht.airline.ArlineServiceApplication: INFO
+
+server:
+  port: 8082
+  compression:
+    enabled: true
+    mime-types: text/xml,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true
+
+app:
+  name: airline-service
+  security:
+    nonce: ${APP_NONCE:Jx9u2Sn5Js1Uzzk6txf0UQ==}
+    password:
+      hash-algorithm: PBKDF2WithHmacSHA512
+    database:
+      secret: ${DB_SECRET:HT_Airline}
+  generationPolicy:
+    password:
+      uppercase: 0
+      lowercase: 0
+      numbers: 6
+      numberSpecialCharacter: 0
+      specialCharacter: "!@#$%^&*()_+"
+    pnr:
+      uppercase: 3
+      lowercase: 0
+      numbers: 3
+      numberSpecialCharacter: 0
+      specialCharacter: "!@#$%^&*()_+"
+  seats-availability:
+    economy: 60
+    premium: 20
+    business: 10
+  settings:
+    email-template:
+      verification: verification-email
+      notify: notify-email
+    smtp:
+      host: ${SMTP_SERVER:smtp.gmail.com}
+      port: ${SMTP_PORT:587}
+      userName: ${SMTP_USERNAME}
+      password: ${SMTP_PASSWORD}
+      protocol: smtp
+      auth: ${SMTP_AUTH:true}
+      ehlo: ${EHLO:true}
+      starttls:
+        enable: ${START_TLS_ENABLE:true}
+      ssl:
+        enable: ${SMTP_SSL:false}
+      debug: ${SMTP_DEBUG:false}

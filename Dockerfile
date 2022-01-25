@@ -1,0 +1,4 @@
+FROM openjdk:17
+VOLUME /tmp
+ARG ARTIFACT_NAME
+ADD target/${ARTIFACT_NAME} app.jar
