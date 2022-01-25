@@ -44,7 +44,7 @@ app:
     password:
       hash-algorithm: PBKDF2WithHmacSHA512
     database:
-      secret: ${DB_SECRET:HT_Airline}
+      secret: ${DB_SECRET}
   generationPolicy:
     password:
       uppercase: 0
