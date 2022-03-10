@@ -34,7 +34,7 @@ Airline management service that has features like customer registration, mileage
 
 ## Open API V3
 
-Request and response model specification are described using Swagger and Open API V3 Documentation - [Link](https://hps-airline.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/)
+Request and response model specification are described using Swagger and Open API V3 Documentation - [Link](https://ht-airline.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/)
 
 ## Prerequisites
 
